@@ -6,6 +6,7 @@
 
 #include <GLFW/glfw3.h>
 
+//Definiendo ancho y alto de pantalla
 const GLint WIDTH = 800, HEIGHT = 600;
 
 // Shaders
@@ -24,7 +25,7 @@ const GLchar* fragmentShaderSource =
 	"out vec4 color;\n"
 	"void main()\n"
 	"{\n"
-	"color = vec4(1.0f, 1.0f, 0.0f, 1.0f);\n"
+	"color = vec4(1.0f, 1.0f, 1.0f, 1.0f);\n"
 	"}\n\0"
 };
 
@@ -48,9 +49,10 @@ int main() {
 	
 	int screenWidth, screenHeight;
 
+	//Buffer de renderizado
 	glfwGetFramebufferSize(window, &screenWidth, &screenHeight);
 
-	//Verificación de errores de creacion  ventana
+	//Verificación de errores de creacion ventana
 	if (nullptr == window) 
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
